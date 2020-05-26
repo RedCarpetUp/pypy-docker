@@ -169,4 +169,4 @@ RUN pip install dist/**.whl
 
 RUN pip install  async-exit-stack async-generator
 
-RUN pip install psycopg2
+RUN pip install git+https://github.com/chtd/psycopg2cffi.git@master#psycopg2cffi
