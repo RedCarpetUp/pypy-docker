@@ -166,3 +166,7 @@ RUN ln -sf /usr/local/bin/pypy3 /usr/local/bin/python3.6
 RUN CMAKE_ARGS="-DPYTHON3_INCLUDE_DIR=/opt/pypy3/include  -D PYTHON3_LIBRARY=~/.pyenv/versions/pypy3.6-7.2.0/lib/libpypy-c.so" pypy3 setup.py bdist_wheel
 
 RUN pip install dist/**.whl
+
+RUN pip install  async-exit-stack async-generator
+
+RUN pip install psycopg2
