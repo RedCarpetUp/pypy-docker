@@ -170,3 +170,30 @@ RUN pip install dist/**.whl
 RUN pip install  async-exit-stack async-generator
 
 RUN pip install git+https://github.com/chtd/psycopg2cffi.git@master#psycopg2cffi
+
+WORKDIR /usr/src/app
+
+if implementation.name == "pypy":
+from psycopg2cffi import compat
+
+compat.register()
+
+# You should use this in your python code
+# if version_info < (3, 6, 0):
+# raise RuntimeError(
+# "Not intended to run on the Python less than '3.6.0' Got version: '%s.%s.%s'"
+# % version_info[:3]
+# )
+
+# if version_info < (3, 7, 0):
+# try:
+# import async_generator
+
+# # from async_exit_stack import AsyncExitStack
+# # from async_generator import asynccontextmanager
+# except ImportError:
+# raise ImportError(
+# "You should install 'async_generator' package to run tests in Python 3.6"
+# )
+# else:
+# from contextlib import asynccontextmanager
