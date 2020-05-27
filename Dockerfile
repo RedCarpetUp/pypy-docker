@@ -173,10 +173,12 @@ RUN pip install git+https://github.com/chtd/psycopg2cffi.git@master#psycopg2cffi
 
 WORKDIR /usr/src/app
 
-if implementation.name == "pypy":
-from psycopg2cffi import compat
+RUN pip install pycryptodome
 
-compat.register()
+# if implementation.name == "pypy":
+# from psycopg2cffi import compat
+
+# compat.register()
 
 # You should use this in your python code
 # if version_info < (3, 6, 0):
