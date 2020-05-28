@@ -21,7 +21,7 @@ prompt-toolkit==2.0.9
 # psycopg2-binary==2.8.3
 
 pyasn1==0.4.5
-Pillow==6.1.0
+Pillow
 firebase-admin==2.17.0
 
 # pycrypto==2.6.1
