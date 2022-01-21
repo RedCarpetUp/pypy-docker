@@ -12,7 +12,7 @@ flake8==3.8.2
 # Flask-WTF==0.14.2
 hashids==1.2.0
 itsdangerous==0.24
-ipython==7.6.1
+ipython==7.16.3
 pydantic==1.5.1
 
 pendulum==2.0.5
