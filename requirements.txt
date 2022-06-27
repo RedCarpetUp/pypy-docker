@@ -40,7 +40,7 @@ pytzdata==2019.1
 
 redis==3.5.2
 requests==2.23.0
-reportlab==3.5.23
+reportlab==3.5.55
 rq==1.4.2
 rq-scheduler==0.10.0
 
